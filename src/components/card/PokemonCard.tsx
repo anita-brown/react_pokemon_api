@@ -8,7 +8,6 @@ import { deletePokemon, getAllPokemon } from "../../redux/features/pokemonSlice"
 const PokemonCard = () => {
   const dispatch = useDispatch();
   const pokemonn = useSelector(getAllPokemon);
-  console.log("kkk", pokemonn);
   return (
     <>
       <div className="flex pb-[5rem] flex-wrap gap-4">
