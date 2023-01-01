@@ -7,12 +7,14 @@ import SinglePokemon from "./components/singlepokemon/SinglePokemon";
 
 const Routes = () => {
   return (
-    <section className="bg-dimWhite h-screen px-8 py-8">
+    <section className="h-screen w-full">
+    <section className="bg-dimWhite px-8 py-8">
       <Header />
       <Switch>
         <Route path="/" element={<Home />} />
         <Route path="/:id" element={<SinglePokemon />} />
       </Switch>
+    </section>
       <Footer />
     </section>
   );

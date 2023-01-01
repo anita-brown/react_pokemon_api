@@ -29,7 +29,11 @@ const Home = () => {
     fetch();
   });
 
-  return <div>{loading ? <h1 className="flex item-center justify-center">Loading...</h1> : <PokemonCard />}</div>;
+  return (
+    <section className="bg-dimWhite">
+      <div>{loading ? <h1 className="flex item-center justify-center">Loading...</h1> : <PokemonCard />}</div>{" "}
+    </section>
+  );
 };
 
 export default Home;

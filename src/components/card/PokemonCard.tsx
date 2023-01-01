@@ -10,15 +10,14 @@ const PokemonCard = () => {
   const pokemonn = useSelector(getAllPokemon);
   return (
     <>
-      <div className="flex pb-[5rem] flex-wrap gap-4">
-        <div></div>
+      <div className= "w-full py-8 flex items-center justify-center flex-wrap gap-8">
         {pokemonn?.map((poke: any, { id }: any) => (
           <div
             key={poke.id}
-            className="w-[20rem] h-[22rem] mt-4 flex flex-col justify-center items-center w-[full] gap-4 h-[100px] p-6 bg-gradient-to-r from-gray-100 to-#fcfcfc-200 rounded-lg shadow-md hover:bg-gradient-to-l hover:from-gray-100 hover:bg-gray-100 cursor-pointer"
+            className="w-[20%] h-[45%] p-4 flex flex-col justify-center items-center w-[full] gap-4 h-[100px] bg-gradient-to-r from-gray-100 to-#fcfcfc-200 rounded-lg shadow-md hover:bg-gradient-to-l hover:from-gray-100 hover:bg-gray-100 cursor-pointer"
           >
             <Link key={id} to={`/${poke.id}`}>
-              <img className="bg-gray-300 w-[10rem] h-[10rem] rounded-full" src={poke?.sprites?.front_default} alt="" />
+              <img className="bg-gray-300 w-[8rem] rounded-full" src={poke?.sprites?.front_default} alt="" />
             </Link>
 
             <div className="flex items-center gap-[8rem]">
