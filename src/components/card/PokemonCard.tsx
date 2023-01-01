@@ -15,7 +15,7 @@ const PokemonCard = () => {
         {pokemonn?.map((poke: any, { id }: any) => (
           <div
             key={poke.id}
-            className="w-[20rem] h-[15rem] mt-4 flex flex-col justify-center items-center w-[full] gap-4 h-[100px] p-6 bg-gradient-to-r from-gray-100 to-#fcfcfc-200 rounded-lg shadow-md hover:bg-gradient-to-l hover:from-gray-100 hover:bg-gray-100 cursor-pointer"
+            className="w-[20rem] h-[22rem] mt-4 flex flex-col justify-center items-center w-[full] gap-4 h-[100px] p-6 bg-gradient-to-r from-gray-100 to-#fcfcfc-200 rounded-lg shadow-md hover:bg-gradient-to-l hover:from-gray-100 hover:bg-gray-100 cursor-pointer"
           >
             <Link key={id} to={`/${poke.id}`}>
               <img className="bg-gray-300 w-[10rem] h-[10rem] rounded-full" src={poke?.sprites?.front_default} alt="" />
