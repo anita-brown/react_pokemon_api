@@ -30,7 +30,7 @@ const Home = () => {
     fetch();
   }, []);
 
-  return <div>{loading ? <h1>Loading...</h1> : <PokemonCard />}</div>;
+  return <div>{loading ? <h1 className="flex item-center justify-center">Loading...</h1> : <PokemonCard />}</div>;
 };
 
 export default Home;

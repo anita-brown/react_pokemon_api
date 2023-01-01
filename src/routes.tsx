@@ -1,9 +1,9 @@
 import React from "react";
 import { Route, Routes as Switch } from "react-router-dom";
+import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 import Home from "./components/home/Home";
 import SinglePokemon from "./components/singlepokemon/SinglePokemon";
-
 
 const Routes = () => {
   return (
@@ -13,6 +13,7 @@ const Routes = () => {
         <Route path="/" element={<Home />} />
         <Route path="/:id" element={<SinglePokemon />} />
       </Switch>
+      <Footer />
     </section>
   );
 };

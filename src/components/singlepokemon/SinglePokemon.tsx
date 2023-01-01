@@ -1,17 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
-import { addPokemon, getAllPokemon, POKEMAN_URL } from "../../redux/features/pokemonSlice";
 import { useParams } from "react-router";
-import { useDispatch } from "react-redux";
 import axios from "axios";
 
 const SinglePokemon = () => {
-  const dispatch = useDispatch();
-
   const [loading, setLoading] = useState(true);
   const { id } = useParams();
   const [newdata, setData]: any = useState([]);
-  console.log("i", newdata);
 
   useEffect(() => {
     const fetch: any = async () => {
@@ -35,8 +29,6 @@ const SinglePokemon = () => {
           {!newdata ? (
             ""
           ) : (
-            // <div className="flex justify-center items-center fixed inset-0 z-50 outline-none focus:outline-none bg-gray-500 bg-opacity-75 transition-opacity">
-            //   <div className="relative w-auto my-6 mx-auto w-[30rem]">
             <div className="mt-8 border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
               <div className="flex flex-col justify-between p-5 border-b border-solid border-gray-300 rounded-t ">
                 <div className="flex justify-center">

@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addPokemon } from "../../redux/features/pokemonSlice";
+import { addNewPokemon } from "../../redux/features/pokemonSlice";
 import { v4 as uuid } from "uuid";
 
 const PokemonForm = ({ setShowModal }: any) => {
-  const [close, setClose] = useState(false);
   const dispatch = useDispatch();
 
   const [values, setValues] = useState({
@@ -28,8 +27,9 @@ const PokemonForm = ({ setShowModal }: any) => {
       setValues({ ...values });
       return;
     }
-    console.log("rr", values);
-    dispatch(addPokemon(values));
+    dispatch(addNewPokemon(values));
+    setShowModal(false)
+    
     setValues({
       name: "",
       image: "",
@@ -59,11 +59,7 @@ const PokemonForm = ({ setShowModal }: any) => {
               >
                 Close
               </button>
-              <button
-                className="text-white bg-orange-500 active:bg-yellow-700 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
-                type="submit"
-                // onClick={() => setShowModal(false)}
-              >
+              <button className="text-white bg-orange-500 active:bg-yellow-700 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1" type="submit">
                 ADD
               </button>
             </div>
