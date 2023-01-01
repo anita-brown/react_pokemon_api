@@ -19,7 +19,6 @@ const Home = () => {
             return responseUrl.data;
           })
         );
-        console.log("res", result);
 
         dispatch(addPokemon(result));
         setLoading(false);
@@ -28,7 +27,7 @@ const Home = () => {
       }
     };
     fetch();
-  }, []);
+  });
 
   return <div>{loading ? <h1 className="flex item-center justify-center">Loading...</h1> : <PokemonCard />}</div>;
 };
